@@ -1,8 +1,24 @@
-const App = () => (
+const Hello = (props) => {
+    return (
+        <div>
+            <p>
+                Hello, {props.name}. You are {props.age} years old.
+            </p>
+        </div>
+    );
+};
 
-  <div>
-    <p>Hello World!</p>
-  </div>
-);
+const App = () => {
+    const nimi = "Pekka";
+    const ika = 26;
+
+    return (
+        <div>
+            <h1>Greetings</h1>
+            <Hello name="Matti" age={26 + 10} />
+            <Hello name={nimi} age={ika} />
+        </div>
+    );
+};
 
 export default App;
