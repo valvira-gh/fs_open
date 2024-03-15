@@ -1,22 +1,17 @@
-const Hello = (props) => {
+const App = () => {
+    const friends = [
+        { name: "Johannes", age: 27 },
+        { name: "Emilia", age: 34 },
+    ];
+
     return (
         <div>
             <p>
-                Hello, {props.name}. You are {props.age} years old.
+                {friends[0].name} {friends[0].age}
             </p>
-        </div>
-    );
-};
-
-const App = () => {
-    const nimi = "Pekka";
-    const ika = 26;
-
-    return (
-        <div>
-            <h1>Greetings</h1>
-            <Hello name="Matti" age={26 + 10} />
-            <Hello name={nimi} age={ika} />
+            <p>
+                {friends[1].name} {friends[1].age}
+            </p>
         </div>
     );
 };
